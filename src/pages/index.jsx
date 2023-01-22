@@ -9,6 +9,7 @@ import { Pricing } from '@/components/Pricing'
 import { Services } from '@/components/Services'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Doctors } from '@/components/Doctors'
+import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <Doctors />
         <Pricing />
         <Faqs />
+        <Contact />
       </main>
       <Footer />
     </>
