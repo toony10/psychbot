@@ -92,7 +92,7 @@ export default function Contact() {
                 Contact us
               </h2>
               <p className="mt-4 text-lg leading-6 text-white">
-                Don't hesitate to reach out. We won't let you down.
+                Don&apos;t hesitate to reach out. We won&apos;t let you down.
               </p>
             </div>
             <div className="mt-12">
@@ -218,7 +218,7 @@ export default function Contact() {
                 </div>
                 <div className="sm:col-span-2">
                   <Button type="submit" color="white" className="mt-10">
-                    Let's talk
+                    Let&apos;s talk
                   </Button>
                 </div>
               </form>
