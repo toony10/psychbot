@@ -78,10 +78,10 @@ function QuoteIcon(props) {
   )
 }
 
-export function Testimonials() {
+export function Doctors() {
   return (
     <section
-      id="testimonials"
+      id="doctors"
       aria-label="What our customers are saying"
       className="bg-slate-50 py-20 sm:py-32"
     >

@@ -12,32 +12,32 @@ import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'Reliable Services',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      'We always strive to bring the user to a good psychological condition as much as possible.',
     image: screenshotPayroll,
   },
   {
-    title: 'Claim expenses',
+    title: 'Quick Appointment',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      'If necessary, you can book an appointment with a psychiatrist in the best time that suits you schedule',
     image: screenshotExpenses,
   },
   {
-    title: 'VAT handling',
+    title: 'Ease of Use',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      'Simple and easy user interface for the average user to reduce stress and tension on the chatbot friend.',
     image: screenshotVatReturns,
   },
   {
-    title: 'Reporting',
+    title: 'Data-driven',
     description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+      "The chatbot is trained on many models, which helps it to solve most of the user's problems.",
     image: screenshotReporting,
   },
 ]
 
-export function PrimaryFeatures() {
+export function Services() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export function PrimaryFeatures() {
 
   return (
     <section
-      id="features"
+      id="services"
       aria-label="Features for running your books"
       className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
@@ -101,7 +101,7 @@ export function PrimaryFeatures() {
                       <h3>
                         <Tab
                           className={clsx(
-                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none',
+                            'font-display [&:not(:focus-visible)]:focus:outline-none text-lg',
                             selectedIndex === featureIndex
                               ? 'text-blue-600 lg:text-white'
                               : 'text-blue-100 hover:text-white lg:text-white'
