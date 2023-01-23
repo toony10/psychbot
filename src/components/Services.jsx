@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
 import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
+import Tona from '@/images/screenshots/tona.jpg'
 import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 
@@ -15,7 +15,7 @@ const features = [
     title: 'Reliable Services',
     description:
       'We always strive to bring the user to a good psychological condition as much as possible.',
-    image: screenshotPayroll,
+    image: Tona,
   },
   {
     title: 'Quick Appointment',
@@ -72,11 +72,10 @@ export function Services() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+            Our services.
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+            We try to provide the best user services.
           </p>
         </div>
         <Tab.Group

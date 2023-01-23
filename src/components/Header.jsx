@@ -79,7 +79,6 @@ function MobileNavigation() {
           >
             <MobileNavLink href="#services">Services</MobileNavLink>
             <MobileNavLink href="#doctors">Doctors</MobileNavLink>
-            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
             <MobileNavLink href="#contact">Contact</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
             <MobileNavLink href="/login">Sign in</MobileNavLink>
@@ -97,12 +96,11 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
-              {/* <Logo className="h-10 w-auto" /> */}
+              <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#services">Services</NavLink>
               <NavLink href="#doctors">Doctors</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
               <NavLink href="#contact">Contact</NavLink>
             </div>
           </div>

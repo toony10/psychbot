@@ -137,23 +137,6 @@ export default function Contact() {
                 </div>
                 <div className="sm:col-span-2">
                   <label
-                    htmlFor="company"
-                    className="block text-sm font-medium text-white"
-                  >
-                    Company
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="text"
-                      name="company"
-                      id="company"
-                      autoComplete="organization"
-                      className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <label
                     htmlFor="email"
                     className="block text-sm font-medium text-white"
                   >
