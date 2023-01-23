@@ -3,9 +3,10 @@ export function Logo(props) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       // xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="150"
+      // width="150"
+      className="w-16 inline-flex"
       zoomAndPan="magnify"
-      viewBox="0 0 375 374.999991"
+      viewBox="125 100 128 130"
       // height="500"
       preserveAspectRatio="xMidYMid meet"
       version="1.0"

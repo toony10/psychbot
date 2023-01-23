@@ -13,8 +13,8 @@ export default function Login() {
         <title>Sign In - TaxPal</title>
       </Head>
       <AuthLayout>
-        <div className="flex flex-col">
-          <Link href="/" aria-label="Home">
+        <div className="flex flex-col ">
+          <Link href="/" aria-label="Home" className="text-center">
             <Logo className="h-10 w-auto" />
           </Link>
           <div className="mt-20">

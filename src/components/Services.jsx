@@ -5,35 +5,35 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import Tona from '@/images/screenshots/tona.jpg'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import service1 from '@/images/screenshots/service1.jpg'
+import service2 from '@/images/screenshots/service2.jpg'
+import service3 from '@/images/screenshots/service3.jpg'
+import service4 from '@/images/screenshots/service4.jpg'
 
 const features = [
   {
     title: 'Reliable Services',
     description:
       'We always strive to bring the user to a good psychological condition as much as possible.',
-    image: Tona,
+    image: service1,
   },
   {
     title: 'Quick Appointment',
     description:
       'If necessary, you can book an appointment with a psychiatrist in the best time that suits you schedule',
-    image: screenshotExpenses,
+    image: service2,
   },
   {
     title: 'Ease of Use',
     description:
       'Simple and easy user interface for the average user to reduce stress and tension on the chatbot friend.',
-    image: screenshotVatReturns,
+    image: service3,
   },
   {
     title: 'Data-driven',
     description:
       "The chatbot is trained on many models, which helps it to solve most of the user's problems.",
-    image: screenshotReporting,
+    image: service4,
   },
 ]
 
