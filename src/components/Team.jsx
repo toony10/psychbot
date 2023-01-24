@@ -70,7 +70,7 @@ const members = [
     id: 7,
     name: 'Mahmoud Abdelfttah',
     href: '#',
-    description: 'Digital creator Head',
+    description: 'Network Engineering',
     image: member7,
 
     imageAlt:
