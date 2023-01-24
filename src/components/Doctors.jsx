@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import doctor1 from '@/images/avatars/doctor1.JPG'
-import doctor2 from '@/images/avatars/doctor2.JPG'
-import doctor3 from '@/images/avatars/doctor3.JPG'
-import doctor4 from '@/images/avatars/doctor4.JPG'
-import doctor5 from '@/images/avatars/doctor5.JPG'
-import doctor6 from '@/images/avatars/doctor6.JPG'
+import doctor1 from '@/images/doctors/doctor1.JPG'
+import doctor2 from '@/images/doctors/doctor2.JPG'
+import doctor3 from '@/images/doctors/doctor3.JPG'
+import doctor4 from '@/images/doctors/doctor4.JPG'
+import doctor5 from '@/images/doctors/doctor5.JPG'
+import doctor6 from '@/images/doctors/doctor6.JPG'
 
 const doctors = [
   [

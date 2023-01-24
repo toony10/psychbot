@@ -71,16 +71,50 @@ export default function Register() {
             autoComplete="new-password"
             required
           />
+          <p className=" col-span-full block text-sm text-gray-900">
+            * We need you to give us some information about a person close to
+            you, and this is optional for you, and it is usually used only in
+            times of necessity.
+          </p>
+          <TextField
+            className="col-span-full"
+            label="name"
+            id="name"
+            name="name"
+            type="text"
+            autoComplete="given-name"
+            required
+          />
+          <TextField
+            className="col-span-full"
+            label="Phone Number"
+            id="phone"
+            name="phone"
+            type="text"
+            autoComplete="phone"
+            required
+          />
+          <TextField
+            className="col-span-full"
+            label="Email address"
+            id="email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            required
+          />
           <SelectField
             className="col-span-full"
-            label="How did you hear about us?"
+            label="his/her relationship with you"
             id="referral_source"
             name="referral_source"
           >
-            <option>AltaVista search</option>
-            <option>Super Bowl commercial</option>
-            <option>Our route 34 city bus ad</option>
-            <option>The “Never Use This” podcast</option>
+            <option>Select</option>
+            <option>Father</option>
+            <option>Mother</option>
+            <option>Brother/sister</option>
+            <option>Friend</option>
+            <option>Other..</option>
           </SelectField>
           <div className="col-span-full">
             <Button

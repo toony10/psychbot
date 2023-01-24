@@ -5,10 +5,10 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import service1 from '@/images/screenshots/service1.jpg'
-import service2 from '@/images/screenshots/service2.jpg'
-import service3 from '@/images/screenshots/service3.jpg'
-import service4 from '@/images/screenshots/service4.jpg'
+import service1 from '@/images/services/service1.jpg'
+import service2 from '@/images/services/service2.jpg'
+import service3 from '@/images/services/service3.jpg'
+import service4 from '@/images/services/service4.jpg'
 
 const features = [
   {
@@ -58,7 +58,7 @@ export function Services() {
   return (
     <section
       id="services"
-      aria-label="Features for running your books"
+      // aria-label="Features for running your books"
       className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
       <Image
@@ -72,7 +72,7 @@ export function Services() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Our services.
+            Our services
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
             We try to provide the best user services.

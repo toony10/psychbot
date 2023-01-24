@@ -3,7 +3,7 @@ import backgroundImage from '@/images/background-features.jpg'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
 
-export default function Contact() {
+export function Contact() {
   return (
     <section
       id="contact"
