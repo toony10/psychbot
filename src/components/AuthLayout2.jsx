@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import regest from '@/images/regest.jpg'
+import regest from '@/images/sing-up.jpg'
 
-export function AuthLayout({ children, fixed = false }) {
+export function AuthLayout2({ children, fixed = false }) {
   return (
     <>
       <div className="relative flex min-h-full justify-center md:px-12 lg:px-0">
