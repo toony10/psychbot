@@ -7,6 +7,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import { signOut, useSession } from 'next-auth/react'
 
 function MobileNavLink({ href, children }) {
   return (
@@ -44,10 +45,12 @@ function MobileNavIcon({ open }) {
 }
 
 function MobileNavigation() {
+  const { data: session, status } = useSession()
+
   return (
     <Popover>
       <Popover.Button
-        className="[&:not(:focus-visible)]:focus:outline-none relative z-10 flex h-8 w-8 items-center justify-center"
+        className="relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
         aria-label="Toggle Navigation"
       >
         {({ open }) => <MobileNavIcon open={open} />}
@@ -82,7 +85,15 @@ function MobileNavigation() {
             <MobileNavLink href="#team">Our Team</MobileNavLink>
             <MobileNavLink href="#contact">Contact</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Sign in</MobileNavLink>
+
+            {status === 'unauthenticated' && (
+              <MobileNavLink href="/login">Sign in</MobileNavLink>
+            )}
+            {status === 'authenticated' && (
+              <Button color="blue" onClick={() => signOut()}>
+                <span>Logout</span>
+              </Button>
+            )}
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -91,10 +102,12 @@ function MobileNavigation() {
 }
 
 export function Header() {
+  const { data: session, status } = useSession()
+
   return (
     <header className="py-10">
       <Container>
-        <nav className="relative z-50 flex justify-between">
+        <nav className="relative z-50 flex items-center justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
               <Logo className="h-10 w-auto" />
@@ -106,16 +119,26 @@ export function Header() {
               <NavLink href="#contact">Contact</NavLink>
             </div>
           </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
+          {status === 'authenticated' && (
+            <div className="hidden items-center gap-x-4 md:flex">
+              <p>Hi, {session.user.name}</p>
+              <Button color="blue" onClick={() => signOut()}>
+                <span>Logout</span>
+              </Button>
             </div>
-            <Button href="/register" color="blue">
-              <span>Get started</span>
-            </Button>
-            <div className="-mr-1 md:hidden">
-              <MobileNavigation />
+          )}
+          {status === 'unauthenticated' && (
+            <div className="flex items-center gap-x-5 md:gap-x-8">
+              <div className="hidden md:block">
+                <NavLink href="/login">Sign in</NavLink>
+              </div>
+              <Button href="/register" color="blue">
+                <span>Get started</span>
+              </Button>
             </div>
+          )}
+          <div className="-mr-1 md:hidden">
+            <MobileNavigation />
           </div>
         </nav>
       </Container>

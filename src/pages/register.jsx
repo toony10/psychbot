@@ -40,7 +40,11 @@ export default function Register() {
         <button
           className="flex items-center gap-x-2 rounded-md border border-gray-400 p-2"
           type="button"
-          onClick={() => signIn('google')}
+          onClick={() =>
+            signIn('google', {
+              callbackUrl: '/',
+            })
+          }
         >
           Sign up with Google
           <Image

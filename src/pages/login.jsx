@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { AuthLayout } from '@/components/AuthLayout'
 import Image from 'next/image'
 import { Logo } from '@/components/Logo'
+import { signIn } from 'next-auth/react'
 
 export default function Login() {
   return (
@@ -38,7 +39,11 @@ export default function Login() {
         <button
           className="flex items-center gap-x-2 rounded-md border border-gray-400 p-2"
           type="button"
-          onClick={() => signIn('google')}
+          onClick={() =>
+            signIn('google', {
+              callbackUrl: '/',
+            })
+          }
         >
           Login with Google
           <Image
