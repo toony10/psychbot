@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { signIn } from 'next-auth/react'
+import { TextField } from '@/components/Fields'
 
 import { AuthLayout2 } from '@/components/AuthLayout2'
 import { Logo } from '@/components/Logo'
@@ -10,7 +11,7 @@ export default function Register() {
   return (
     <>
       <Head>
-        <title>Sign Up - TaxPal</title>
+        <title>Sign Up - PsychyBot</title>
       </Head>
       <AuthLayout2>
         <div className="mb-4 flex flex-col">
@@ -37,8 +38,15 @@ export default function Register() {
             </p>
           </div>
         </div>
+        <TextField
+          label="Emergency contact number"
+          id="number"
+          name="number"
+          type="tel"
+          required
+        />
         <button
-          className="flex items-center gap-x-2 rounded-md border border-gray-400 p-2"
+          className="mt-4 flex items-center gap-x-2 rounded-md border border-gray-400 p-2"
           type="button"
           onClick={() =>
             signIn('google', {

@@ -9,7 +9,7 @@ export default function Login() {
   return (
     <>
       <Head>
-        <title>Sign In - TaxPal</title>
+        <title>Sign In - PsychyBot</title>
       </Head>
       <AuthLayout>
         <div className="mb-4 flex flex-col">
@@ -36,6 +36,7 @@ export default function Login() {
             </p>
           </div>
         </div>
+
         <button
           className="flex items-center gap-x-2 rounded-md border border-gray-400 p-2"
           type="button"
