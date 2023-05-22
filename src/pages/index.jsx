@@ -7,6 +7,7 @@ import { Services } from '@/components/Services'
 import { Doctors } from '@/components/Doctors'
 import { Team } from '@/components/Team'
 import { Contact } from '@/components/Contact'
+import Chatbot from '@/components/Chatbot'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Doctors />
         <Team />
         <Contact />
+        <Chatbot />
       </main>
       <Footer />
     </>
