@@ -4,36 +4,31 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
-import service1 from '@/images/services/service1.jpg'
-import service2 from '@/images/services/service2.jpg'
-import service3 from '@/images/services/service3.jpg'
-import service4 from '@/images/services/service4.jpg'
 
 const features = [
   {
     title: 'Reliable Services',
     description:
       'We always strive to bring the user to a good psychological condition as much as possible.',
-    image: service1,
+    image: '/images/services/service1.jpg',
   },
   {
     title: 'Quick Appointment',
     description:
       'If necessary, you can book an appointment with a psychiatrist in the best time that suits you schedule',
-    image: service2,
+    image: '/images/services/service2.jpg',
   },
   {
     title: 'Ease of Use',
     description:
       'Simple and easy user interface for the average user to reduce stress and tension on the chatbot friend.',
-    image: service3,
+    image: '/images/services/service3.jpg',
   },
   {
     title: 'Data-driven',
     description:
       "The chatbot is trained on many models, which helps it to solve most of the user's problems.",
-    image: service4,
+    image: '/images/services/service4.jpg',
   },
 ]
 
@@ -63,11 +58,11 @@ export function Services() {
     >
       <Image
         className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
-        src={backgroundImage}
+        src='/images/background-features.jpg'
         alt=""
         width={2245}
         height={1636}
-        unoptimized
+        
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
@@ -136,7 +131,9 @@ export function Services() {
                     <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <Image
                         className="w-full"
-                        src={feature.image}
+                        src={ feature.image }
+                        width={0}
+                        height={ 0 }
                         alt=""
                         priority
                         sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"

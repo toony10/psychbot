@@ -1,8 +1,15 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
+const withMT = require("@material-tailwind/react/utils/withMT");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx}'],
+  content: ['./src/**/*.{js,jsx}',
+    "path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+    "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js",
+    "./node_modules/flowbite-react/**/*.js",
+    "./pages/**/*.{js,jsx}",
+    "./public/**/*.html",],
   theme: {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -32,5 +39,6 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
-}
+  plugins: [require('@tailwindcss/forms'), require("flowbite/plugin")],
+
+};

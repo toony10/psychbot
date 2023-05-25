@@ -1,80 +1,62 @@
 import Image from 'next/image'
 
-import member1 from '@/images/team/member1.jpg'
-import member2 from '@/images/team/member2.jpg'
-import member3 from '@/images/team/member3.jpg'
-import member4 from '@/images/team/member4.jpg'
-import member5 from '@/images/team/member5.jpg'
-import member6 from '@/images/team/member6.jpg'
-import member7 from '@/images/team/member7.jpg'
 const members = [
   {
     id: 1,
     name: 'Ahmed Tawfiq',
     href: '#',
     description: 'Information Systems Officer (Team Leader)',
-    image: member1,
-    imageAlt: 'A7a.',
+    image: '/images/team/member1.jpg',
+    imageAlt: 'team member.',
   },
   {
     id: 2,
     name: 'Moaz Bahnas',
     href: '#',
     description: 'Front end Wed Developer',
-    image: member2,
-
-    imageAlt:
-      'Olive drab green insulated bottle with flared screw lid and flat top.',
+    image: '/images/team/member2.jpg',
+    imageAlt: 'team member.',
   },
   {
     id: 3,
     name: 'Ahmed Salah',
     href: '#',
     description: 'System Administrator Spcialis',
-    image: member3,
+    image: '/images/team/member3.jpg',
 
-    imageAlt:
-      'Person using a pen to cross a task off a productivity paper card.',
+    imageAlt: 'team member.',
   },
   {
     id: 4,
     name: 'Diaa Eid',
     href: '#',
     description: 'Technical Support',
-    image: member4,
-
-    imageAlt:
-      'Hand holding black machined steel mechanical pencil with brass tip and top.',
+    image: '/images/team/member4.jpg',
+    imageAlt: 'team member.',
   },
   {
     id: 5,
     name: 'Anton Amir',
     href: '#',
     description: 'Front end Wed Developer',
-    image: member5,
-
-    imageAlt:
-      'Hand holding black machined steel mechanical pencil with brass tip and top.',
+    image: '/images/team/member5.jpg',
+    imageAlt: 'team member.',
   },
   {
     id: 6,
     name: 'Karen Kamal',
     href: '#',
     description: 'Graphic Designer',
-    image: member6,
-
-    imageAlt:
-      'Hand holding black machined steel mechanical pencil with brass tip and top.',
+    image: '/images/team/member6.jpg',
+    imageAlt: 'team member.',
   },
   {
     id: 7,
     name: 'Mahmoud Abdelfttah',
     href: '#',
     description: 'Network Engineering',
-    image: member7,
-
-    imageAlt:
-      'Hand holding black machined steel mechanical pencil with brass tip and top.',
+    image: '/images/team/member7.jpg',
+    imageAlt: 'team member.',
   },
 ]
 
@@ -98,6 +80,9 @@ export function Team() {
                 <Image
                   src={member.image}
                   alt={member.imageAlt}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
               </div>

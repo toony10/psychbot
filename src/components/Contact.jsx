@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import backgroundImage from '@/images/background-features.jpg'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
 
@@ -12,8 +11,8 @@ export function Contact() {
     >
       <Image
         className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
-        src={backgroundImage}
-        alt=""
+        src="/images/background-features.jpg"
+        alt="bg"
         width={2245}
         height={1636}
         unoptimized

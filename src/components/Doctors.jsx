@@ -1,129 +1,100 @@
 import Image from 'next/image'
-
+import Link from 'next/link'
+import { BiNotepad } from 'react-icons/bi'
 import { Container } from '@/components/Container'
-import doctor1 from '@/images/doctors/doctor1.JPG'
-import doctor2 from '@/images/doctors/doctor2.JPG'
-import doctor3 from '@/images/doctors/doctor3.JPG'
-import doctor4 from '@/images/doctors/doctor4.JPG'
-import doctor5 from '@/images/doctors/doctor5.JPG'
-import doctor6 from '@/images/doctors/doctor6.JPG'
-
 const doctors = [
-  [
-    {
-      content: 'Specialized in mood disorders, sexual disorders.',
-      doctor: {
-        name: 'Huda Radwan',
-
-        image: doctor1,
-      },
-    },
-    {
-      content: 'Specialized in depression, anxiety disorders.',
-      doctor: {
-        name: 'Fouad Mohamed',
-        image: doctor6,
-      },
-    },
-  ],
-  [
-    {
-      content: 'Specialized in depression, anxiety disorders.',
-      doctor: {
-        name: 'Mina Aziz',
-        image: doctor5,
-      },
-    },
-    {
-      content: 'Specialized in depression, phobias and social phobias.',
-      doctor: {
-        name: 'Amira Mustafa',
-        image: doctor2,
-      },
-    },
-  ],
-  [
-    {
-      content:
-        'Specialized in Separation Anxiety Disorder, General Anxiety, Social Phobia, Relationships.',
-      doctor: {
-        name: 'Shaima Thabet',
-        image: doctor3,
-      },
-    },
-    {
-      content: 'Specialized in anxiety disorders, addiction.',
-      doctor: {
-        name: 'Mahmoud Rashid',
-        image: doctor4,
-      },
-    },
-  ],
+  {
+    name: 'Huda Radwan',
+    specialty: ['Anxiety disorders', 'Obsessive-compulsive disorder'],
+    image: '/images/doctors/doctor1.JPG',
+    experiences: ['Psychiatrist and psychotherapist'],
+  },
+  {
+    name: 'Basma Mahmoud',
+    specialty: ['Autism spectrum disorders', 'Mood disorders'],
+    image: '/images/doctors/doctor2.JPG',
+    experiences: [
+      'psychologist',
+      'Member of the Royal College of Psychiatrists',
+      'A psychiatrist in the children unit',
+    ],
+  },
+  {
+    name: 'Hussein Hajj Ahmed',
+    specialty: 'Specialized in depression, anxiety disorders.',
+    image: '/images/doctors/doctor3.JPG',
+  },
+  {
+    name: 'Marina Makar',
+    specialty: 'Specialized in depression, phobias and social phobias.',
+    image: '/images/doctors/doctor4.JPG',
+  },
+  {
+    name: 'Ahmed Hashish',
+    specialty:
+      'Specialized in Separation Anxiety Disorder, General Anxiety, Social Phobia, Relationships.',
+    image: '/images/doctors/doctor5.JPG',
+  },
+  {
+    name: 'Zakaria Fakhoury',
+    specialty: 'Specialized in anxiety disorders, addiction.',
+    image: '/images/doctors/doctor6.JPG',
+  },
 ]
-
-function QuoteIcon(props) {
-  return (
-    <svg aria-hidden="true" width={105} height={78} {...props}>
-      <path d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z" />
-    </svg>
-  )
-}
 
 export function Doctors() {
   return (
-    <section
-      id="doctors"
-      aria-label="What our customers are saying"
-      className="bg-slate-50 py-20 sm:py-32"
-    >
+    <section className="bg-gray-50 py-12 sm:py-16" id="doctors">
       <Container>
-        <div className="mx-auto max-w-2xl md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Doctors
+        <div className="text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            Meet Our Doctors
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            The most efficient psychiatrists are ready to help you.
+          <p className="mx-auto mt-4 max-w-2xl text-xl text-gray-500">
+            Our experienced psychiatrists are ready to help you with your mental
+            health needs.
           </p>
         </div>
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3"
-        >
-          {doctors.map((column, columnIndex) => (
-            <li key={columnIndex}>
-              <ul role="list" className="flex flex-col gap-y-6 sm:gap-y-8">
-                {column.map((item, itemIndex) => (
-                  <li key={itemIndex}>
-                    <figure className="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
-                      <figcaption className="relative flex items-center justify-between">
-                        <div>
-                          <div className="font-display text-base text-slate-900">
-                            {item.doctor.name}
-                          </div>
-                        </div>
-                        <div className="overflow-hidden rounded-full bg-slate-50">
-                          <Image
-                            className="h-14 w-14 object-cover"
-                            src={item.doctor.image}
-                            alt=""
-                            width={56}
-                            height={56}
-                          />
-                        </div>
-                      </figcaption>
-                      <blockquote className="relative mt-6 border-t border-slate-100 pt-6">
-                        <p className="text-lg tracking-tight text-slate-900">
-                          {item.content}
-                        </p>
-                      </blockquote>
-                    </figure>
-                  </li>
-                ))}
-              </ul>
-            </li>
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {doctors.map((doctor, index) => (
+            <div
+              key={index}
+              className="overflow-hidden rounded-lg bg-white shadow"
+            >
+              <div className="px-4 py-5 sm:p-6">
+                <div className="sm:flex sm:items-center sm:justify-between">
+                  <div className="mb-4 sm:mb-0">
+                    <div className="text-lg font-medium leading-6 text-gray-900">
+                      {doctor.name}
+                    </div>
+                    <div className="mt-1 text-sm text-gray-500">
+                      {doctor.specialty}
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
+                      <Image
+                        className="rounded-full"
+                        src={doctor.image}
+                        alt=""
+                        width={48}
+                        height={48}
+                        sizes="100vw"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </Container>
+      <Link href="../DoctorsDetails" className="m-10 flex justify-center">
+        <button class=" flex rounded bg-blue-500 py-2 px-4 text-3xl font-bold text-white hover:bg-blue-700">
+          Book your appointment
+          <BiNotepad className="m-auto ml-1 text-2xl" />
+        </button>
+      </Link>
     </section>
   )
 }

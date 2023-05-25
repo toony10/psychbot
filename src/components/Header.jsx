@@ -2,7 +2,6 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
-
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
@@ -79,6 +78,7 @@ function MobileNavigation() {
           >
             <MobileNavLink href="#services">Services</MobileNavLink>
             <MobileNavLink href="#doctors">Doctors</MobileNavLink>
+            <MobileNavLink href="#stories">Heros</MobileNavLink>
             <MobileNavLink href="#team">Our Team</MobileNavLink>
             <MobileNavLink href="#contact">Contact</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
@@ -96,12 +96,13 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
+            <Link href="/" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#services">Services</NavLink>
               <NavLink href="#doctors">Doctors</NavLink>
+              <NavLink href="#stories">Heros</NavLink>
               <NavLink href="#team">Our Team</NavLink>
               <NavLink href="#contact">Contact</NavLink>
             </div>
