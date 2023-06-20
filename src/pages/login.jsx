@@ -1,18 +1,18 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { AuthLayout } from '@/components/AuthLayout'
-import { Button } from '@/components/Button'
-import { TextField } from '@/components/Fields'
+import Image from 'next/image'
 import { Logo } from '@/components/Logo'
+import { signIn } from 'next-auth/react'
 
 export default function Login() {
   return (
     <>
       <Head>
-        <title>Sign In - TaxPal</title>
+        <title>Sign In - PsychyBot</title>
       </Head>
       <AuthLayout>
-        <div className="flex flex-col ">
+        <div className="mb-4 flex flex-col">
           <Link
             href="/"
             aria-label="Home"
@@ -36,36 +36,25 @@ export default function Login() {
             </p>
           </div>
         </div>
-        <form action="#" className="mt-10 grid grid-cols-1 gap-y-8">
-          <TextField
-            label="Email address"
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            required
+
+        <button
+          className="flex items-center gap-x-2 rounded-md border border-gray-400 p-2"
+          type="button"
+          onClick={() =>
+            signIn('google', {
+              callbackUrl: '/',
+            })
+          }
+        >
+          Login with Google
+          <Image
+            src={'/google.svg'}
+            alt=""
+            width={0}
+            height={0}
+            className="w-5"
           />
-          <TextField
-            label="Password"
-            id="password"
-            name="password"
-            type="password"
-            autoComplete="current-password"
-            required
-          />
-          <div>
-            <Button
-              type="submit"
-              variant="solid"
-              color="blue"
-              className="w-full"
-            >
-              <span>
-                Sign in <span aria-hidden="true">&rarr;</span>
-              </span>
-            </Button>
-          </div>
-        </form>
+        </button>
       </AuthLayout>
     </>
   )
