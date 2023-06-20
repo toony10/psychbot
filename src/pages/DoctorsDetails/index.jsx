@@ -19,7 +19,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import { Tooltip } from '@mui/material';
-
+import {IoCall} from 'react-icons/io';
 const drawerWidth = 280;
 
 
@@ -255,6 +255,182 @@ const doctors = [
       },
     ],
   },
+  {
+    name: 'Bahaa Mahmoud',
+    jobTitle: 'psychologist',
+    img: '/images/doctors/doctor7.JPG',
+    Specializations: [
+      'Childrens problems',
+      'Adolescence problems',
+      'mood disorders (depression)',
+      'Anxiety and obsessiveness',
+      'Marriage counseling/relationship problems',
+      'Eating disorders',
+    ],
+    experiences: [
+      {
+        Position: 'Psychiatrist',
+        place: 'Hospitals of Ministry of Health, Giza District',
+        date: 'Jan 2020 - Now',
+      },
+      {
+        Position: 'Resident at Neurology department',
+        place: 'Al Hussein hospital, AlAzhar University',
+        date: 'Jun 2021 - Dec 2021',
+      },
+      {
+        Position: 'Addiction and rehabilitation Clinic of the Egyptian Addiction control authority',
+        place: 'Ministry of Social Solidarity',
+        date: 'Feb 2019 - Nov 2021',
+      },
+      {
+        Position:
+          'Psychiatrist',
+        place: 'Al-Azhar University Hospitals in Cairo',
+        date: 'Jun 2018 - Jun 2021',
+      },
+      {
+        position: 'Physician',
+        place: 'Bolaq Primary Care Unit, Bolaq Health Administration',
+        date: 'Apr 2018 - Jun 2018',
+      },
+      {
+        Position:
+          'Addiction and rehabilitation facilities',
+        place: 'Mekky Psychiatric center - Al-Huda psychiatric Facility',
+        date: 'Jan 2018 - now',
+      },
+    ],
+  },
+  {
+    name: 'Mina Aziz',
+    jobTitle: 'psychologist',
+    img: '/images/doctors/doctor8.JPG',
+    Specializations: [
+      'mood disorders (depression)',
+      'Anxiety and obsessiveness',
+    ],
+    experiences: [
+      {
+        Position: 'member',
+        place: 'Egyptian Association of Psychotherapists',
+        date: 'Feb 2021 - now',
+      },
+ {
+        Position: 'member',
+        place: 'Association of Psychologists',
+        date: 'Feb 2021 - now',
+      }, {
+        Position: 'member',
+        place: 'American Psychological Association',
+        date: 'Jan 2021 - now',
+      }, {
+        Position: 'Psychologist',
+        place: 'Saint Vincent de Paul',
+        date: 'Aug 2019 - Nov 2020',
+      },
+    ],
+  }, {
+    name: 'Abdul Basit Abdullah',
+    jobTitle: 'Psychologist',
+    img: '/images/doctors/doctor9.JPG',
+    Specializations: [
+      'Childrens problems',
+      'mood disorders (depression)',
+      'Anxiety and obsessiveness',
+    ],
+    experiences: [
+      {
+        Position: 'Psychiatrist',
+        place: 'Sennar application',
+        date: 'Jan 2019 - Jan 2022',
+      },
+      {
+        Position: 'Psychiatrist',
+        place: 'Human development company',
+        date: 'Jan 2016 - now',
+      },
+      {
+        Position: 'Speech and Language Pathologist',
+        place: 'Al Sharabia Specialized Hospital',
+        date: 'Jan 2013 - Jan 2014',
+      },
+      {
+        Position:
+          'Psychiatrist',
+        place: 'Ahlam Awladna Association for the Care and Rehabilitation of People with Special Needs',
+        date: 'Jan 2010 - Jan 2012',
+      }
+    ],
+  }, {
+    name: 'Rita Schneiss',
+    jobTitle: 'psychologist',
+    img: '/images/doctors/doctor10.JPG',
+   Specializations: [
+      'mood disorders (depression)',
+      'Anxiety and obsessiveness',
+    ],
+    experiences: [
+      {
+        Position: 'Running my own practice',
+        place: 'REBT',
+        date: 'Jan 2012 - Now',
+      },
+      {
+        Position: 'Clinical psychologist',
+        place: 'Crisálida',
+        date: 'Jan 2006 - Jan 2009',
+      },
+      {
+        Position: 'clinical psychologist',
+        place: 'MIND clinics',
+        date: 'Jan 2001 - Jan 2003',
+      },
+    ],
+  }, {
+    name: 'Waseem Ashraf',
+    jobTitle: 'psychologist',
+    img: '/images/doctors/doctor11.JPG',
+    Specializations: [
+      'mood disorders (depression)',
+      'Anxiety and obsessiveness',
+      'Marriage counseling/relationship problems',
+    ],
+    experiences: [
+      {
+        Position: 'Psychiatrist',
+        place: 'Awareness of mental health',
+        date: 'Nov 2021 - now',
+      },
+      {
+        Position: 'Clinical psychologist',
+        place: 'B Perfect Psychiatry',
+        date: 'Sept 2020 - Jun 2022',
+      },
+      {
+        Position: 'Clinical psychologist',
+        place: 'Edraak Psychiatry',
+        date: 'Feb 2020 - Sept 2020',
+      },
+      {
+            Position: 'Clinical psychologist',
+
+        place: 'UNICEF Egypt',
+        date: 'Dec 2019 - now',
+      },
+      {
+            Position: 'Clinical psychologist',
+        place: 'Recovery Resort for Psychiatry and Addiction Treatment',
+        date: 'Oct 2019 - May 2020',
+      },
+      {
+        Position:
+          'Clinical psychologist',
+        place: 'Motherhood and Childhood Council',
+        date: 'Dec 2017 - Dec 2019',
+      },
+    ],
+  },
 ]
 
 
@@ -384,7 +560,12 @@ function ResponsiveDrawer(props)
         <div className='flex flex-col lg:flex-row'>
           <div className='w-[40%] m-auto lg:m-0'>
           <Image src={doc.img} width={ 500 } height={ 500 } className='rounded-lg	' />
-            <h1 className='text-center text-3xl font-semibold text-blue-700 mt-5 '>dr. {doc.name}</h1>
+            <h1 className='text-center text-3xl font-semibold text-blue-700 mt-5 '>dr. { doc.name }</h1>
+            <a className='flex mt-10' href="tel:01090677513">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-auto">
+                Book now
+              </button>
+              </a>
           </div>
           <div className='ml-12 '>
           <div className='mb-10'>
