@@ -1,7 +1,5 @@
 import Image from 'next/image'
 
-import regest from '@/images/regest.jpg'
-
 export function AuthLayout({ children, fixed = false }) {
   return (
     <>
@@ -14,8 +12,11 @@ export function AuthLayout({ children, fixed = false }) {
         <div className="hidden sm:contents lg:relative lg:block lg:flex-1">
           <Image
             className="absolute inset-0 h-full w-full object-cover"
-            src={regest}
+            src="/images/regest.jpg"
             alt=""
+            width={0}
+            height={0}
+            sizes="100vw"
             unoptimized
           />
         </div>
